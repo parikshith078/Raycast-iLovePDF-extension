@@ -20,6 +20,22 @@
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "secretKey",
+      "title": "Secret Key",
+      "description": "Secret Key",
+      "type": "textfield",
+      "required": true
+    },
+    {
+      "name": "publicKey",
+      "title": "Public Key",
+      "description": "Public Key",
+      "type": "textfield",
+      "required": true
+    }
+  ],
   "dependencies": {
     "@ilovepdf/ilovepdf-nodejs": "^0.2.5",
     "@raycast/api": "^1.63.0"

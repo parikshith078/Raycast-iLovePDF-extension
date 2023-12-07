@@ -1,9 +1,17 @@
 import ILovePDFApi from "@ilovepdf/ilovepdf-nodejs";
 import fs from "fs";
 import ILovePDFFile from "@ilovepdf/ilovepdf-nodejs/ILovePDFFile";
+import { getPreferenceValues } from "@raycast/api";
 
-const SECRET_KEY = "secret_key_f7be8d9d84ca2387b04451a5c5cbd1e5_HDdd090a07c0757fe85f91e1f40228b68ea69";
-const PUBLIC_KEY = "project_public_eadde78d09536a1291f6c99a465f95f6_U_pd13f17635efe8d276aec41389c89fc64d9";
+interface Preferences {
+  secretKey: string;
+  publicKey: string;
+}
+
+const preferences = getPreferenceValues<Preferences>();
+
+const SECRET_KEY = preferences.secretKey;
+const PUBLIC_KEY = preferences.publicKey;
 const SavePath = "/Users/parikshith/Downloads/";
 let filename = "";
 
